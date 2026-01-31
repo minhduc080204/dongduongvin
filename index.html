@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luxury Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .heading {
+        font-family: "Playfair Display", serif;
+        letter-spacing: 0.08em;
+      }
+
+      .gold-text {
+        background: radial-gradient(
+          circle at center,
+          #ffef95 0%,
+          #f9cd53 30%,
+          #ffb300 55%,
+          #d4af37 75%,
+          #8a6f1f 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .gold-bg {
+        background: linear-gradient(135deg, #d4af37, #f5e39c);
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s ease;
+      }
+
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .divider {
+        height: 2px;
+        width: 100px;
+        background: linear-gradient(90deg, transparent, #ffc400, transparent);
+        margin: 24px auto;
+      }
+
+      .lux-bg {
+        background: linear-gradient(to bottom, #0f2742, #102f52, #f8efd8);
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+      }
+
+      .hover-glow:hover {
+        box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+        transform: translateY(-6px);
+      }
+
+      .parallax {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+      .text-light h3 {
+        background-image: radial-gradient(circle, rgb(255, 145, 77), rgb(168, 120, 50));
+        
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .text-dark {
+        color: rgb(3, 43, 65);
+      }
+    </style>
+  </head>
+  <body class="lux-bg text-white">
+    <!-- HERO -->
+    <section
+      class="min-h-screen flex items-center justify-center text-center px-6 fade-up parallax"
+      style="background-image: url(&quot;./assets/bg/bgdiamond.png&quot;)"
+    >
+      <!-- <section class="min-h-screen flex items-center justify-center text-center px-6 fade-up parallax" style="background-image:url('https://images.unsplash.com/flagged/photo-1551907234-fb773c6df3b3?q=80&w=1600&auto=format&fit=crop');"> -->
+      <div class="bg-black/50 p-10 rounded-2xl max-w-3xl">
+        <h1 class="heading text-4xl md:text-6xl gold-text mb-4 font-bold">
+          KIM CƯƠNG VỊ TRÍ
+        </h1>
+        <h2 class="heading text-2xl md:text-4xl mb-6">PHÚ QUÝ TẦM NHÌN</h2>
+        <div class="divider"></div>
+        <p class="max-w-2xl mx-auto text-gray-200 mb-8">
+          Biểu tượng sống thượng lưu bên bờ biển, nơi hội tụ tinh hoa kiến trúc,
+          tiện ích và giá trị bền vững.
+        </p>
+
+        <button
+          class="px-10 py-3 rounded-full gold-bg font-semibold transition hover-glow text-dark"
+        >
+          TÌM HIỂU DỰ ÁN
+        </button>
+      </div>
+    </section>
+
+    <!-- IMAGE STRIP -->
+    <section
+      style="
+        background-image: url(&quot;./assets/bg/bg_1.png&quot;);
+        background-size: cover;
+      "
+    >
+      <section
+        class="py-16 px-6 max-w-7xl mx-auto grid md:grid-cols-3 gap-6 fade-up"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-2xl hover-glow transition"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-2xl hover-glow transition"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-2xl hover-glow transition"
+        />
+      </section>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section
+      style="background-image: url(&quot;./assets/bg/bgdiamond.png&quot;)"
+    >
+      <section class="py-24 px-6 max-w-6xl mx-auto fade-up">
+        <h3 class="heading text-4xl gold-text text-center mb-4 font-bold">
+          TỔNG QUAN DỰ ÁN
+        </h3>
+        <div class="divider"></div>
+
+        <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
+          <div class="space-y-4 text-1xl text-gray-200 font-semibold">
+            <p>• Tên dự án: NEWTOWN DIAMOND</p>
+            <p>• Vị trí: Trung tâm thành phố biển</p>
+            <p>• Quy mô: Tổ hợp căn hộ cao cấp</p>
+            <p>• Hình thức sở hữu: Lâu dài</p>
+            <p>• Bàn giao: Nội thất tiêu chuẩn quốc tế</p>
+          </div>
+
+          <!-- <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" class="rounded-2xl hover-glow transition" /> -->
+          <img
+            src="./assets/img/nhanban.jpg"
+            class="rounded-2xl hover-glow transition fl col-span-2"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- LOCATION -->
+    <section style="background-image: url(&quot;./assets/bg/bg_1.png&quot;)">
+      <section class="py-24 px-6 text-gray-900 fade-up">
+        <div class="text-light">
+          <h3 class="heading text-4xl font-bold text-center mb-4">
+            NƠI TỌA ĐỘ VÀNG
+          </h3>
+        </div>
+        <div class="divider"></div>
+
+        <p class="max-w-3xl mx-auto text-center mt-6 text-dark text-2xl font-semibold">
+          Kết nối nhanh đến trung tâm thành phố, sân bay, khu du lịch và các
+          trục giao thông huyết mạch.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
+          <div class="card p-6 rounded-xl hover-glow transition text-white">
+            <h4 class="gold-text mb-2">5 PHÚT</h4>
+            <p class="text-dark">Bãi biển trung tâm</p>
+          </div>
+          <div class="card p-6 rounded-xl hover-glow transition text-white">
+            <h4 class="gold-text mb-2">10 PHÚT</h4>
+            <p class="text-dark">Quảng trường thành phố</p>
+          </div>
+          <div class="card p-6 rounded-xl hover-glow transition text-white">
+            <h4 class="gold-text mb-2">20 PHÚT</h4>
+            <p class="text-dark">Sân bay quốc tế</p>
+          </div>
+        </div>
+
+        <div class="mt-16 max-w-5xl mx-auto">
+          <!-- <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop" class="rounded-2xl hover-glow transition" /> -->
+          <img
+            src="./assets/img/bien.jpg"
+            class="rounded-2xl hover-glow transition"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- AMENITIES -->
+    <section class="py-24 px-6 max-w-7xl mx-auto fade-up">
+      <h3 class="heading text-3xl gold-text text-center mb-4">
+        TIỆN ÍCH HỢP CHUẨN QUỐC TẾ
+      </h3>
+      <div class="divider"></div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="card p-6 rounded-xl hover-glow transition">
+          Hồ bơi vô cực
+        </div>
+        <div class="card p-6 rounded-xl hover-glow transition">
+          Phòng gym cao cấp
+        </div>
+        <div class="card p-6 rounded-xl hover-glow transition">
+          Khu vui chơi trẻ em
+        </div>
+        <div class="card p-6 rounded-xl hover-glow transition">
+          Vườn trên không
+        </div>
+        <div class="card p-6 rounded-xl hover-glow transition">Khu BBQ</div>
+        <div class="card p-6 rounded-xl hover-glow transition">
+          Trung tâm thương mại
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <img
+          src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-2xl hover-glow transition"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-2xl hover-glow transition"
+        />
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section
+      style="
+        background-image: url(&quot;./assets/bg/bg_tree.png&quot;);
+        background-position: -400px;
+      "
+    >
+      <section class="py-24 px-6 bg-[#102f52]/95 fade-up">
+        <h3 class="heading text-3xl gold-text text-center mb-4">
+          KHÔNG GIAN SỐNG
+        </h3>
+        <div class="divider"></div>
+
+        <div class="grid md:grid-cols-4 gap-4 max-w-7xl mx-auto mt-12">
+          <img
+            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop"
+            class="rounded-xl hover-glow transition"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1560448075-bb485b067938?q=80&w=800&auto=format&fit=crop"
+            class="rounded-xl hover-glow transition"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop"
+            class="rounded-xl hover-glow transition"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1560448075-bb485b067938?q=80&w=800&auto=format&fit=crop"
+            class="rounded-xl hover-glow transition"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- CTA -->
+    <section
+      class="py-32 text-center bg-black fade-up parallax"
+      style="
+        background-image: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop&quot;);
+      "
+    >
+      <div class="bg-black/60 p-12 rounded-2xl max-w-2xl mx-auto">
+        <h3 class="heading text-4xl gold-text mb-6">
+          SỞ HỮU KHÔNG GIAN SỐNG ĐỈNH CAO
+        </h3>
+        <p class="text-gray-300 max-w-xl mx-auto mb-8">
+          Liên hệ ngay để nhận thông tin chi tiết và chính sách ưu đãi độc
+          quyền.
+        </p>
+
+        <button
+          class="px-12 py-4 rounded-full gold-bg text-black font-semibold transition hover-glow"
+        >
+          ĐĂNG KÝ TƯ VẤN
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-gray-400 bg-black">
+      © 2026 NEWTOWN DIAMOND. All Rights Reserved.
+    </footer>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+      const elements = document.querySelectorAll(".fade-up");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
