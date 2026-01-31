@@ -39,6 +39,7 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
+        padding-top: 0.15em; /* chừa không gian cho dấu */
       }
 
       .gold-bg {
@@ -84,8 +85,12 @@
         background-position: center;
       }
       .text-light h3 {
-        background-image: radial-gradient(circle, rgb(255, 145, 77), rgb(168, 120, 50));
-        
+        background-image: radial-gradient(
+          circle,
+          rgb(255, 145, 77),
+          rgb(168, 120, 50)
+        );
+
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -95,9 +100,263 @@
       .text-dark {
         color: rgb(3, 43, 65);
       }
+
+      /* HEADER */
+      .gold-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #ffe7b6;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+      }
+
+      /* CONTAINER */
+      .nav-container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 12px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* LOGO */
+      .logo {
+        font-size: 24px;
+        letter-spacing: 0.15em;
+        color: #ba7902;
+      }
+
+      /* MENU */
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 32px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu a {
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: 0.3s ease;
+      }
+
+      /* UNDERLINE HOVER */
+      .menu a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 2px;
+        background: #022354;
+        transition: width 0.3s ease;
+      }
+
+      .menu a:hover::after {
+        width: 100%;
+      }
+
+      /* AUTH */
+      .auth {
+        display: flex;
+        gap: 16px;
+      }
+
+      .login {
+        color: #3a2a05;
+        text-decoration: none;
+        padding: 6px 14px;
+        border-radius: 999px;
+        transition: 0.3s ease;
+      }
+
+      .login:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+
+      .register {
+        text-decoration: none;
+        padding: 6px 18px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #ffda6a, #d4af37);
+        color: #000;
+        font-weight: 600;
+        box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+        transition: 0.3s ease;
+      }
+
+      .register:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+      }
+      .amenity-card {
+        position: relative;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 215, 140, 0.08),
+          rgba(16, 47, 82, 0.85)
+        );
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 200, 120, 0.25);
+        text-align: center;
+        color: #f5f5f5;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+
+      /* Gold top line accent */
+      .amenity-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20%;
+        width: 60%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #ffcc70, transparent);
+      }
+
+      /* Icon */
+      .amenity-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.4));
+      }
+
+      /* Title */
+      .amenity-card h4 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        background: radial-gradient(circle, #fff7d6, #ffb300, #a87532);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Desc */
+      .amenity-card p {
+        font-size: 0.95rem;
+        color: #ddd;
+        line-height: 1.5;
+      }
+
+      /* Hover luxury motion */
+      .amenity-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 25px 60px rgba(255, 180, 80, 0.35);
+      }
+      .detail-panel {
+        position: relative;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 215, 140, 0.1),
+          rgba(16, 47, 82, 0.9)
+        );
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 200, 120, 0.25);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        overflow: hidden;
+        transition: all 0.4s ease;
+      }
+
+      /* Gold side accent */
+      .detail-panel::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 3px;
+        height: 80%;
+        background: linear-gradient(180deg, transparent, #ffcc70, transparent);
+      }
+
+      /* Row */
+      .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      /* Icon */
+      .detail-icon {
+        font-size: 1.8rem;
+        min-width: 2.5rem;
+        text-align: center;
+        filter: drop-shadow(0 0 6px rgba(255, 200, 120, 0.4));
+      }
+
+      /* Label */
+      .detail-item h5 {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffcc70;
+        margin-bottom: 0.2rem;
+      }
+
+      /* Value */
+      .detail-item p {
+        font-size: 1rem;
+        color: #f2f2f2;
+      }
+
+      /* Hover motion */
+      .detail-panel:hover {
+        transform: translateX(6px);
+        box-shadow: 0 20px 50px rgba(255, 190, 90, 0.35);
+      }
     </style>
   </head>
   <body class="lux-bg text-white">
+    <header class="gold-header">
+      <nav class="nav-container">
+        <!-- LOGO -->
+        <div class="logo heading font-bold">
+          <span>VIN LÀNG VÂN</span>
+        </div>
+
+        <!-- MENU -->
+        <ul class="menu">
+          <li>
+            <a class="text-dark text-1xl uppercase" href="#du-an">Dự Án</a>
+          </li>
+          <li>
+            <a class="text-dark text-1xl uppercase" href="#tien-ich"
+              >Tiện Ích</a
+            >
+          </li>
+          <li>
+            <a class="text-dark text-1xl uppercase" href="#san-pham"
+              >Sản Phẩm</a
+            >
+          </li>
+          <li>
+            <a class="text-dark text-1xl uppercase" href="#chinh-sach"
+              >Chính Sách</a
+            >
+          </li>
+          <li>
+            <a class="text-dark text-1xl uppercase" href="#lien-he">Liên Hệ</a>
+          </li>
+        </ul>
+
+        <!-- AUTH -->
+        <div class="auth">
+          <a href="#" class="login">Đăng Nhập</a>
+          <a href="#" class="register">Đăng Ký</a>
+        </div>
+      </nav>
+    </header>
     <!-- HERO -->
     <section
       class="min-h-screen flex items-center justify-center text-center px-6 fade-up parallax"
@@ -158,7 +417,7 @@
         </h3>
         <div class="divider"></div>
 
-        <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
+        <!-- <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
           <div class="space-y-4 text-1xl text-gray-200 font-semibold">
             <p>• Tên dự án: NEWTOWN DIAMOND</p>
             <p>• Vị trí: Trung tâm thành phố biển</p>
@@ -167,7 +426,54 @@
             <p>• Bàn giao: Nội thất tiêu chuẩn quốc tế</p>
           </div>
 
-          <!-- <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" class="rounded-2xl hover-glow transition" /> -->
+          <img
+            src="./assets/img/nhanban.jpg"
+            class="rounded-2xl hover-glow transition fl col-span-2"
+          />
+        </div> -->
+        <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
+          <div class="detail-panel hover-glow transition">
+            <div class="detail-item">
+              <span class="detail-icon">🏷️</span>
+              <div>
+                <h5>Tên dự án</h5>
+                <p>NEWTOWN DIAMOND</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <div>
+                <h5>Vị trí</h5>
+                <p>Trung tâm thành phố biển</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">🏙️</span>
+              <div>
+                <h5>Quy mô</h5>
+                <p>Tổ hợp căn hộ cao cấp</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">📜</span>
+              <div>
+                <h5>Hình thức sở hữu</h5>
+                <p>Lâu dài</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">🛋️</span>
+              <div>
+                <h5>Bàn giao</h5>
+                <p>Nội thất tiêu chuẩn quốc tế</p>
+              </div>
+            </div>
+          </div>
+
           <img
             src="./assets/img/nhanban.jpg"
             class="rounded-2xl hover-glow transition fl col-span-2"
@@ -186,22 +492,24 @@
         </div>
         <div class="divider"></div>
 
-        <p class="max-w-3xl mx-auto text-center mt-6 text-dark text-2xl font-semibold">
+        <p
+          class="max-w-3xl mx-auto text-center mt-6 text-dark text-2xl font-semibold"
+        >
           Kết nối nhanh đến trung tâm thành phố, sân bay, khu du lịch và các
           trục giao thông huyết mạch.
         </p>
 
         <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
           <div class="card p-6 rounded-xl hover-glow transition text-white">
-            <h4 class="gold-text mb-2">5 PHÚT</h4>
+            <h4 class="gold-text text-2xl mb-2">5 PHÚT</h4>
             <p class="text-dark">Bãi biển trung tâm</p>
           </div>
           <div class="card p-6 rounded-xl hover-glow transition text-white">
-            <h4 class="gold-text mb-2">10 PHÚT</h4>
+            <h4 class="gold-text text-2xl mb-2">10 PHÚT</h4>
             <p class="text-dark">Quảng trường thành phố</p>
           </div>
           <div class="card p-6 rounded-xl hover-glow transition text-white">
-            <h4 class="gold-text mb-2">20 PHÚT</h4>
+            <h4 class="gold-text text-2xl mb-2">20 PHÚT</h4>
             <p class="text-dark">Sân bay quốc tế</p>
           </div>
         </div>
@@ -218,12 +526,13 @@
 
     <!-- AMENITIES -->
     <section class="py-24 px-6 max-w-7xl mx-auto fade-up">
-      <h3 class="heading text-3xl gold-text text-center mb-4">
+      <h3 class="heading text-3xl gold-text text-center mb-4 font-bold">
         TIỆN ÍCH HỢP CHUẨN QUỐC TẾ
       </h3>
       <div class="divider"></div>
 
-      <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <!-- <div class="grid md:grid-cols-3 gap-8 mt-12">
+        
         <div class="card p-6 rounded-xl hover-glow transition">
           Hồ bơi vô cực
         </div>
@@ -240,6 +549,43 @@
         <div class="card p-6 rounded-xl hover-glow transition">
           Trung tâm thương mại
         </div>
+      </div> -->
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">🏊‍♂️</div>
+          <h4>Hồ bơi vô cực</h4>
+          <p>Không gian thư giãn với tầm nhìn toàn cảnh biển</p>
+        </div>
+
+        <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">💪</div>
+          <h4>Phòng gym cao cấp</h4>
+          <p>Trang thiết bị hiện đại, huấn luyện viên chuyên nghiệp</p>
+        </div>
+
+        <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">🎠</div>
+          <h4>Khu vui chơi trẻ em</h4>
+          <p>An toàn, sáng tạo và thân thiện với trẻ nhỏ</p>
+        </div>
+
+        <!-- <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">🌿</div>
+          <h4>Vườn trên không</h4>
+          <p>Không gian xanh giữa tầng mây và ánh nắng</p>
+        </div>
+
+        <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">🔥</div>
+          <h4>Khu BBQ</h4>
+          <p>Gắn kết gia đình với tiệc ngoài trời sang trọng</p>
+        </div>
+
+        <div class="amenity-card hover-glow transition">
+          <div class="amenity-icon">🛍️</div>
+          <h4>Trung tâm thương mại</h4>
+          <p>Thương hiệu quốc tế, mua sắm và giải trí đẳng cấp</p>
+        </div> -->
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 mt-16">
@@ -262,7 +608,7 @@
       "
     >
       <section class="py-24 px-6 bg-[#102f52]/95 fade-up">
-        <h3 class="heading text-3xl gold-text text-center mb-4">
+        <h3 class="heading text-3xl gold-text text-center mb-4 font-bold">
           KHÔNG GIAN SỐNG
         </h3>
         <div class="divider"></div>
@@ -296,7 +642,7 @@
       "
     >
       <div class="bg-black/60 p-12 rounded-2xl max-w-2xl mx-auto">
-        <h3 class="heading text-4xl gold-text mb-6">
+        <h3 class="heading text-4xl gold-text mb-6 font-bold">
           SỞ HỮU KHÔNG GIAN SỐNG ĐỈNH CAO
         </h3>
         <p class="text-gray-300 max-w-xl mx-auto mb-8">
@@ -305,7 +651,7 @@
         </p>
 
         <button
-          class="px-12 py-4 rounded-full gold-bg text-black font-semibold transition hover-glow"
+          class="px-12 py-4 rounded-full gold-bg text-dark font-semibold transition hover-glow"
         >
           ĐĂNG KÝ TƯ VẤN
         </button>
