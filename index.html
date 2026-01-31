@@ -318,45 +318,87 @@
     </style>
   </head>
   <body class="lux-bg text-white">
-    <header class="gold-header">
-      <nav class="nav-container">
+    <header class="gold-header fixed top-0 left-0 w-full z-50">
+      <nav
+        class="nav-container flex items-center justify-between px-6 py-4 max-w-7xl mx-auto"
+      >
         <!-- LOGO -->
-        <div class="logo heading font-bold">
+        <div class="logo heading font-bold text-xl md:text-2xl">
           <span>VIN LÀNG VÂN</span>
         </div>
 
+        <!-- HAMBURGER -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-dark text-3xl focus:outline-none"
+        >
+          ☰
+        </button>
+
         <!-- MENU -->
-        <ul class="menu">
-          <li>
-            <a class="text-dark text-1xl uppercase" href="#du-an">Dự Án</a>
+        <ul
+          id="menu"
+          class="menu hidden md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[#ffdd88]/95 md:bg-transparent text-center md:text-left shadow-xl md:shadow-none transition-all duration-300"
+        >
+          <li class="border-b md:border-none flex items-center mx-4">
+            <a
+              class="block  text-dark text-1xl uppercase hover:text-black"
+              href="#du-an"
+              >Dự Án</a
+            >
           </li>
-          <li>
-            <a class="text-dark text-1xl uppercase" href="#tien-ich"
+          <li class="border-b md:border-none">
+            <a
+              class="block text-dark text-1xl uppercase hover:text-black"
+              href="#tien-ich"
               >Tiện Ích</a
             >
           </li>
-          <li>
-            <a class="text-dark text-1xl uppercase" href="#san-pham"
+          <li class="border-b md:border-none">
+            <a
+              class="block text-dark text-1xl uppercase hover:text-black"
+              href="#san-pham"
               >Sản Phẩm</a
             >
           </li>
-          <li>
-            <a class="text-dark text-1xl uppercase" href="#chinh-sach"
+          <li class="border-b md:border-none">
+            <a
+              class="block text-dark text-1xl uppercase hover:text-black"
+              href="#chinh-sach"
               >Chính Sách</a
             >
           </li>
           <li>
-            <a class="text-dark text-1xl uppercase" href="#lien-he">Liên Hệ</a>
+            <a
+              class="block text-dark text-1xl uppercase hover:text-black"
+              href="#lien-he"
+              >Liên Hệ</a
+            >
+          </li>
+
+          <!-- AUTH MOBILE -->
+          <li class="md:hidden flex justify-center gap-4 py-4">
+            <a
+              href="#"
+              class="px-6 py-2 rounded-full gold-bg text-dark font-semibold"
+              >Đăng Nhập</a
+            >
+            <a
+              href="#"
+              class="px-6 py-2 rounded-full border border-yellow-600 text-dark font-semibold"
+              >Đăng Ký</a
+            >
           </li>
         </ul>
 
-        <!-- AUTH -->
-        <div class="auth">
+        <!-- AUTH DESKTOP -->
+        <div class="auth hidden md:flex gap-4">
           <a href="#" class="login">Đăng Nhập</a>
           <a href="#" class="register">Đăng Ký</a>
         </div>
       </nav>
     </header>
+
     <!-- HERO -->
     <section
       class="min-h-screen flex items-center justify-center text-center px-6 fade-up parallax"
@@ -431,7 +473,7 @@
             class="rounded-2xl hover-glow transition fl col-span-2"
           />
         </div> -->
-        <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
+        <!-- <div class="grid md:grid-cols-3 gap-5 mt-12 items-center">
           <div class="detail-panel hover-glow transition">
             <div class="detail-item">
               <span class="detail-icon">🏷️</span>
@@ -478,7 +520,62 @@
             src="./assets/img/nhanban.jpg"
             class="rounded-2xl hover-glow transition fl col-span-2"
           />
-        </div>
+        </div> -->
+        <div
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 items-center"
+>
+  <!-- DETAIL PANEL -->
+  <div
+    class="detail-panel hover-glow transition col-span-1 sm:col-span-1 md:col-span-1"
+  >
+    <div class="detail-item">
+      <span class="detail-icon">🏷️</span>
+      <div>
+        <h5>Tên dự án</h5>
+        <p>NEWTOWN DIAMOND</p>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-icon">📍</span>
+      <div>
+        <h5>Vị trí</h5>
+        <p>Trung tâm thành phố biển</p>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-icon">🏙️</span>
+      <div>
+        <h5>Quy mô</h5>
+        <p>Tổ hợp căn hộ cao cấp</p>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-icon">📜</span>
+      <div>
+        <h5>Hình thức sở hữu</h5>
+        <p>Lâu dài</p>
+      </div>
+    </div>
+
+    <div class="detail-item">
+      <span class="detail-icon">🛋️</span>
+      <div>
+        <h5>Bàn giao</h5>
+        <p>Nội thất tiêu chuẩn quốc tế</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE -->
+  <img
+    src="./assets/img/nhanban.jpg"
+    class="rounded-2xl hover-glow transition w-full h-[240px] sm:h-[320px] md:h-full object-cover col-span-1 sm:col-span-1 md:col-span-2"
+  />
+</div>
+
       </section>
     </section>
 
@@ -679,6 +776,14 @@
       );
 
       elements.forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
     </script>
   </body>
 </html>
